@@ -113,6 +113,10 @@ if ($(".menu-con-slider").length) {
     autoplay: {
       delay: 5000,
     },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
   });
 
   const $menuTxtSlider = new Swiper(".menu-txt-slider", {
@@ -126,6 +130,7 @@ if ($(".menu-con-slider").length) {
     },
   });
 }
+
 // event swiper(MAIN)
 if ($(".event-swiper").length) {
   const $eventSwiper = new Swiper(".event-swiper", {
@@ -170,6 +175,21 @@ $eventTabCon.on("click", function (e) {
 
 /* MENU!!!---------------------------------------------- */
 
+// menu-tab(MENU)
+const $menuTabMenu = $(".menu-tab > li");
+const $menuTabCon = $(".menu-con");
+
+menuTabAction(0);
+
+$menuTabMenu.on("click", function (e) {
+  e.preventDefault();
+
+  const menuTabIdx = $(this).index();
+  console.log(menuTabIdx);
+
+  menuTabAction(menuTabIdx);
+});
+
 // 공통의 동작을 함수로 정의
 function menuTabAction(index) {
   // 탭메뉴 활성화
@@ -208,16 +228,13 @@ function snsTabAction(index) {
   $snsTabCon.eq(index).show();
 }
 
-// rewards.html의 캐릭터 고정
+/* MAP!!!---------------------------------------------- */
 
-const $footerSection = $("footer");
+const $mapSearch = $(".map-search");
+const $btnFold = $(".btn-fold");
 
-$footerSection.on("mouseenter", function () {
-  $(".app-store figure").addClass("on");
-});
-
-$footerSection.on("mouseleave", function () {
-  $(".app-store figure").removeClass("on");
+$btnFold.on("click", function () {
+  $mapSearch.toggleClass("on"); // Toggle the 'on' class for .map-search
 });
 
 // TOP 버튼

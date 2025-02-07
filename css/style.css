@@ -32,7 +32,7 @@
 }
 
 .menu-txt-slider {
-  flex: 1 0 48%;
+  flex: 1 0 45%;
 }
 
 .menu-con-slider-wrap {
@@ -50,10 +50,10 @@
 }
 
 .menu-text-card h3 {
-  font: 8rem/1.1 "Poppins", sans-serif;
-  font-weight: 700;
+  font: 8rem/1.1 "Black Han Sans", sans-serif;
   color: var(--title-color);
   word-break: keep-all;
+  margin-top: 2.8rem;
 }
 
 .menu-text-card p {
@@ -73,6 +73,16 @@
   height: 52.4rem;
 }
 
+.swiper-pagination {
+  top: 105% !important;
+  background: var(--black20);
+  color: var(--main-color);
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--main-color);
+}
+
 .menu-card {
   position: relative;
   width: 42.7rem;
@@ -88,6 +98,7 @@
 .menu-card figure {
   width: 100%;
   height: 100%;
+  background: var(--black10);
 }
 
 .menu-card .menu-name {

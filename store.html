@@ -55,7 +55,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/inquiry.css" />
+    <link rel="stylesheet" href="./css/store.css" />
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -63,7 +63,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/script.js" defer></script>
-    <script src="./js/inquiry.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -147,124 +146,143 @@
       <!-- s: visual -->
       <section class="visual">
         <div class="inner">
-          <strong class="bread">Home > INGUIRY</strong>
+          <strong class="bread">Home > STORE</strong>
           <div class="visual-title">
-            <h2>INGUIRY</h2>
-            <p>
-              라라코스트는 매년 컨셉에 맞는 다양한 신메뉴 출시와 본사 연구실에서
-              신메뉴 전체 교육을 하며 점주님과 소통하고 있습니다.
-            </p>
+            <h2>STORE</h2>
+            <p>가까운 라라코스트 매장을 손쉽게 찾아보세요.</p>
           </div>
         </div>
         <figure class="visual-pic">
-          <img src="https://www.raracost.com/images/sub/view/9.jpg" alt="" />
+          <img src="https://www.raracost.com/images/sub/view/1.jpg" alt="" />
         </figure>
       </section>
       <!-- //e: visual -->
 
-      <!-- s: faq -->
-      <section class="faq" id="notice">
-        <div class="inner">
-          <div class="sec-title" data-aos="fade-down" data-aos-delay="100">
-            <strong>창업문의</strong>
-            <h3>자주 묻는 질문</h3>
+      <section class="map" id="map">
+        <div class="map-wrap">
+          <div class="map-view">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1645756.3603199008!2d125.43681164574163!3d36.32763267662368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357189e4d6ad9de5%3A0x75fa548f939bb06b!2z6528652867iM66CI65OcIOyDgeustOygkA!5e0!3m2!1sko!2skr!4v1738904403064!5m2!1sko!2skr"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
+          <div class="map-search">
+            <button type="button" class="btn-fold">
+              <i class="hidden">매장찾기 리스트 닫기</i>
+            </button>
+            <strong>매장 선택</strong>
+            <div class="search">
+              <input type="text" id="text" />
+              <label for="text">매장명을 검색해주세요.</label>
+              <button><i class="hidden">검색</i></button>
+            </div>
+            <div class="map-area">
+              <div>
+                <select>
+                  <option value="">시/도 선택</option>
+                  <option value="">서울</option>
+                  <option value="">인천</option>
+                  <option value="">경기</option>
+                  <option value="">강원</option>
+                  <option value="">대전</option>
+                  <option value="">세종</option>
+                  <option value="">대구</option>
+                  <option value="">광주</option>
+                  <option value="">부산</option>
+                  <option value="">울산</option>
+                  <option value="">충북</option>
+                  <option value="">충남</option>
+                  <option value="">전북</option>
+                  <option value="">전남</option>
+                  <option value="">경북</option>
+                  <option value="">경남</option>
+                  <option value="">제주</option>
+                </select>
+              </div>
 
-          <div class="faq-wrap" data-aos="fade-up" data-aos-delay="400">
-            <!-- .info-wrap>ul>li*5>(i.hidden{question}+.faq-title>strong+h4)+.answer-wrap>i.hidden{answer}+p -->
-            <div class="info-wrap" data-aos="fade-up" data-aos-delay="500">
+              <div>
+                <select>
+                  <option value="">구/군 선택</option>
+                </select>
+              </div>
+            </div>
+            <div class="map-filter">
+              <strong>제공 서비스 선택</strong>
               <ul>
                 <li>
-                  <div class="faq-title">
-                    <i>Q</i>
-                    <div class="faq-txt">
-                      <h4>매장/본사를 직접 방문해 보고 싶어요.</h4>
-                    </div>
-                  </div>
-                  <div class="answer-wrap">
-                    <div class="answer-con">
-                      <i>A</i>
-                      <p>
-                        상담을 통해 방문 약속을 잡으실 수 있습니다. 언제든
-                        편하게 연락 부탁드립니다.
-                      </p>
-                    </div>
-                  </div>
+                  <input type="checkbox" id="fil-queens" />
+                  <label for="fil-queens">전체</label>
                 </li>
                 <li>
-                  <div class="faq-title">
-                    <i>Q</i>
-                    <div class="faq-txt">
-                      <h4>오픈 이후의 지원 시스템이 있나요?</h4>
-                    </div>
-                  </div>
-                  <div class="answer-wrap">
-                    <div class="answer-con">
-                      <i>A</i>
-                      <p>
-                        슈퍼바이저의 매장 컨설팅과 고객 유입, 유지를 위한 마케팅
-                        솔루션을 제공합니다.
-                      </p>
-                    </div>
-                  </div>
+                  <input type="checkbox" id="fil-wine" />
+                  <label for="fil-wine">주차가능</label>
                 </li>
                 <li>
-                  <div class="faq-title">
-                    <i>Q</i>
-                    <div class="faq-txt">
-                      <h4>매장 운영 시의 수익률을 알고 싶어요.</h4>
-                    </div>
-                  </div>
-                  <div class="answer-wrap">
-                    <div class="answer-con">
-                      <i>A</i>
-                      <p>
-                        지나치게 높은 수익률을 보장하는 광고에 유의하세요.
-                        라라코스트는 실질적인 수익률을 제공합니다.
-                      </p>
-                    </div>
-                  </div>
+                  <input class="on" type="checkbox" id="fil-beer" />
+                  <label for="fil-beer">배달</label>
                 </li>
                 <li>
-                  <div class="faq-title">
-                    <i>Q</i>
-                    <div class="faq-txt">
-                      <h4>정보공개서를 확인할 수 있나요?</h4>
-                    </div>
-                  </div>
-                  <div class="answer-wrap">
-                    <div class="answer-con">
-                      <i>A</i>
-                      <p>
-                        한국프랜차이즈산업협회 페이지를 통해 정보공개서를
-                        열람하실 수 있습니다.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="faq-title">
-                    <i>Q</i>
-                    <div class="faq-txt">
-                      <h4>가맹점에 부과되는 로열티는 따로 없나요?</h4>
-                    </div>
-                  </div>
-                  <div class="answer-wrap">
-                    <div class="answer-con">
-                      <i>A</i>
-                      <p>
-                        네. 없습니다. (주)라라에프앤비는 매장 운영능력에 따른
-                        무손실 수익을 보장합니다.
-                      </p>
-                    </div>
-                  </div>
+                  <input type="checkbox" id="fil-child" />
+                  <label for="fil-child">키즈존</label>
                 </li>
               </ul>
             </div>
+            <!-- ul.map-info>li*3>(dl>dt+dd*2)+ul.map-ico>li*3 -->
+            <ul class="map-info">
+              <li>
+                <dl>
+                  <dt>광주상무점</dt>
+                  <dd>전화번호: 미등록</dd>
+                  <dd>광주 서구 치평동 1208-5 2층</dd>
+                </dl>
+                <ul class="map-ico">
+                  <li class="on"><i class="hidden">주차가능</i></li>
+                  <li class="on"><i class="hidden">배달</i></li>
+                  <li><i class="hidden">키즈존</i></li>
+                </ul>
+              </li>
+              <li>
+                <dl>
+                  <dt>다사죽곡점</dt>
+                  <dd>전화번호: 미등록</dd>
+                  <dd>대구 달성군 다사읍 달구벌대로 855 2층</dd>
+                </dl>
+                <ul class="map-ico">
+                  <li><i class="hidden">주차가능</i></li>
+                  <li class="on"><i class="hidden">배달</i></li>
+                  <li><i class="hidden">키즈존</i></li>
+                </ul>
+              </li>
+              <li>
+                <dl>
+                  <dt>동성로점</dt>
+                  <dd>전화번호: 053-744-3455</dd>
+                  <dd>대구 수성구 달구벌대로496길 6 1층</dd>
+                </dl>
+                <ul class="map-ico">
+                  <li class="on"><i class="hidden">주차가능</i></li>
+                  <li class="on"><i class="hidden">배달</i></li>
+                  <li class="on"><i class="hidden">키즈존</i></li>
+                </ul>
+              </li>
+              <li>
+                <dl>
+                  <dt>나성점</dt>
+                  <dd>전화번호: 044-862-3230</dd>
+                  <dd>세종특별자치시 한누리대로 283 세진팰리스 2층</dd>
+                </dl>
+                <ul class="map-ico">
+                  <li class="on"><i class="hidden">주차가능</i></li>
+                  <li class="on"><i class="hidden">배달</i></li>
+                  <li class="on"><i class="hidden">키즈존</i></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
-      <!-- //e: faq -->
     </main>
 
     <footer id="footer">
@@ -316,8 +334,5 @@
         </div>
       </div>
     </footer>
-
-    <a href="#top" class="btn-top"><i class="hidden">TOP</i></a>
-    <a href="#talk" class="btn-talk"><i class="hidden">TALK</i></a>
   </body>
 </html>

@@ -31,10 +31,6 @@
   transform: translateY(-50%) scaleX(-1);
 }
 
-.vison-title p:nth-child(1) {
-  color: var(--main-color);
-}
-
 .vison-title h4 {
   font-size: 8.2rem;
   font-weight: 600;
@@ -52,7 +48,7 @@
 }
 
 .vip-service {
-  margin-top: 12rem;
+  margin-top: 15rem;
   display: flex;
   justify-content: center;
   gap: 4.5rem;
@@ -76,13 +72,13 @@
 }
 
 .vip-service li:nth-child(1) {
-  background-image: url(../img/vip-pic1.jpg);
+  background-image: url(https://www.raracost.com/images/sub/company_top.png);
 }
 .vip-service li:nth-child(2) {
-  background-image: url(../img/vip-pic2.jpg);
+  background-image: url(https://www.raracost.com/images/sub/historyBG.png);
 }
 .vip-service li:nth-child(3) {
-  background-image: url(../img/vip-pic3.jpg);
+  background-image: url(https://www.raracost.com/images/sub/interview1.png);
 }
 
 .vip-service li::after {
@@ -91,22 +87,19 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  background: var(--main-color10);
   transition: 0.4s;
 }
 
 .vip-service li:hover::after {
   content: "";
-  height: 100%;
   background: var(--main-color);
 }
 
 .vip-service dl {
   position: relative;
   z-index: 1;
-  opacity: 0;
-}
-.vip-service li:hover dl {
-  opacity: 1;
 }
 
 .vip-service dt {
@@ -122,146 +115,354 @@
 }
 
 .vip-service dd {
+  margin-top: 2.3rem;
   transform: translateY(350%);
   color: var(--white70);
   transition: 0.5s;
-  margin-top: 2rem;
 }
-
 .vip-service li:hover dd {
   transform: translateY(0);
 }
 
-.ideology .sec-title {
-  margin-top: 17.8rem;
+.tip {
+  margin-bottom: 17.5rem;
 }
 
-.slider {
-  margin-top: 7rem;
-  position: relative;
-  width: 100%;
-  height: 73.3rem;
-  overflow: hidden;
-  left: 50%;
-  transform: translateX(-40%);
+.tip .sec-title {
+  margin-top: 10.4167vw;
 }
 
-.foreground {
-  width: 73rem;
-  height: 74.7rem;
-  position: absolute;
-  top: 45%;
-  left: 40%;
-  transform: translateX(-50%);
-  bottom: 48.3rem;
-  z-index: 1;
-  border-radius: 50%;
-  background: var(--white100);
-  overflow: hidden;
+.tip-list {
+  margin-top: 7.5758%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.wrap {
-  width: 149.7rem;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-  border-radius: 50%;
-  /* 여기 이미지@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-  background: url(https://cliocosmetic.com/ko/img/sub/people_bg.jpg) no-repeat
-    50% / cover;
-}
-
-.ideology-slider {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background: var(--white100);
-}
-
-.ideology-txt dt {
-  font-size: 4rem;
-  font-weight: 700;
-  color: var(--main-color);
-}
-
-.ideology-txt dd {
-  margin-top: 0.6rem;
-  font-size: 2.5rem;
-  font-weight: 500;
+.tip-list li {
+  /* border: 1px solid #000; */
+  width: 31.5rem;
+  aspect-ratio: 1/1.6825;
+  padding: 3rem;
   word-break: keep-all;
-}
-
-.ideology-txt dd + dd {
-  margin-top: 3.5rem;
-}
-
-.story {
-  /* 여기 이미지@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-  background: url(../img/brand-story-pic.jpg) no-repeat 50% / cover;
-  padding: 21.2rem 0 20rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: no-repeat 50% / cover;
   position: relative;
-  /* transform: translateY(-50%); */
-  z-index: 1;
+  text-align: center;
 }
 
-.story::after {
+.tip-list li:hover {
+  justify-content: center;
+}
+
+.tip-list li:nth-child(1) {
+  background-image: url(https://www.raracost.com/pg/data/file/blog01/thumb-6ba1833742e89441bb0fa53383b0000b_zo6yjbrl_71a93593d6bc6423478dc5ffc551580532127f74_400x400.jpg);
+}
+.tip-list li:nth-child(2) {
+  background-image: url(https://www.raracost.com/pg/data/editor/2011/thumb-64121a8adc188a5035352db2d003b4e8_1604457326_3505_400x400.jpg);
+}
+.tip-list li:nth-child(3) {
+  background-image: url(https://www.raracost.com/pg/data/editor/2011/thumb-61ebfb053ba45c792370255d72fa267b_1605147306_394_400x400.jpg);
+}
+.tip-list li:nth-child(4) {
+  background-image: url(https://www.raracost.com/pg/data/editor/2012/thumb-2bc6780fcbae3bdf508bc72944ad5f2a_1608005549_0827_400x400.jpg);
+}
+
+.tip-list li::after {
   content: "";
+  transition: 0.7s;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    to right,
-    rgba(73, 73, 71, 100),
-    rgba(73, 73, 71, 0)
+    to bottom,
+    rgba(199, 16, 37, 0),
+    rgba(199, 16, 37, 0),
+    rgba(199, 16, 37, 0.7)
   );
 }
 
-.story .sec-title {
+.tip-list li:hover::after {
+  content: "";
+  height: 100%;
+  background: var(--main-color70);
+}
+
+.tip-list li strong {
+  /* font-size: 2.8rem; */
+  font-size: clamp(2.4rem, 8.8888%, 2.8rem);
+  font-weight: 700;
   color: var(--white100);
   position: relative;
   z-index: 1;
+  top: 90%;
+  transition: 0.4s;
 }
 
-.story .sec-title h3 {
-  width: 50%;
-  word-break: keep-all;
-}
-
-.story p {
-  width: 50%;
-  font-size: 2rem;
+.tip-list li p {
+  margin-top: 2rem;
+  font-weight: 500;
   color: var(--white70);
-  word-break: keep-all;
-  margin-top: 2.8rem;
   position: relative;
   z-index: 1;
+  top: 120%;
 }
 
-.story div + p {
-  margin-top: 8rem;
+.tip-list li:hover strong {
+  /* font-size: 3rem; */
+  font-size: clamp(2.6rem, 9%, 3rem);
+  top: 35%;
 }
 
-.story p:last-child {
-  font-size: 2.2rem;
-  font-weight: 600;
+.tip-list li:hover p {
+  top: 35%;
+  transition: 0.6s;
+}
+
+.app-benefit {
+  /* height: 100vh; */
+  padding: 10.6rem 0 10.2rem 0;
+  background: var(--main-color);
+}
+
+.app-benefit .sec-title {
+  color: var(--white100);
+}
+.app-benefit .sec-title strong {
   color: var(--white100);
 }
 
-.thanks {
-  background-color: #efefef;
-  height: 38rem;
+.app-benefit .view-more {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--white100);
+  right: 0;
 }
 
-.thanks h4 {
-  color: var(--title-color);
-  font: 5.2rem/1.5 "Pretendard", sans-serif;
-  padding: 16rem 0;
+.app-benefit .view-more::after {
+  background-image: url(../img/arrow-w-right.png);
+}
+
+.app-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2.8rem;
+  gap: 2rem;
+}
+
+.app-icon {
+  width: 37.5rem;
+  height: 29.6rem;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  background: var(--white10);
+  border-radius: 10px;
+  padding: 5rem 4rem;
+  position: relative;
+}
+
+.app-icon:hover {
+  box-shadow: 0 0 10px rgba(250, 255, 242, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.app-icon dl::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6.5rem;
+  aspect-ratio: 1/1;
+  background: no-repeat 50%;
+}
+
+.app-icon dl.app-icon-1::before {
+  background-image: url(../img/app-ico1.svg);
+}
+.app-icon dl.app-icon-2::before {
+  background-image: url(../img/app-ico2.svg);
+}
+.app-icon dl.app-icon-3::before {
+  background-image: url(../img/app-ico3.svg);
+}
+.app-icon dl.app-icon-4::before {
+  background-image: url(../img/app-ico4.svg);
+}
+.app-icon dl.app-icon-5::before {
+  background-image: url(../img/app-ico5.svg);
+}
+.app-icon dl.app-icon-6::before {
+  background-image: url(../img/app-ico6.svg);
+}
+.app-icon dl.app-icon-7::before {
+  background-image: url(../img/app-ico7.svg);
+}
+.app-icon dl.app-icon-8::before {
+  background-image: url(../img/app-ico8.svg);
+}
+.app-icon dl.app-icon-9::before {
+  background-image: url(../img/app-ico9.svg);
+}
+
+.app-icon dl dt {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white100);
+  margin-top: 1rem;
+}
+
+.app-icon dl dd {
+  margin-top: 1.2rem;
+  color: var(--white50);
+  word-break: keep-all;
+}
+
+.price .sec-title {
+  margin-top: 10.4167vw;
+}
+
+.price-con-item {
+  /* margin-top: 7.7rem; */
+  margin-top: 3.0104vw;
   text-align: center;
 }
-.thanks strong {
+
+.price-con-item thead {
+  background: var(--main-color10);
+  border-top: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--black20);
+  height: 7rem;
+}
+
+.price-con-item tbody tr {
+  border-bottom: 2px solid var(--black20);
+  height: 13.7rem;
+}
+
+.price-con-item th,
+.price-con-item td {
+  padding: 0 5rem;
+  vertical-align: middle;
+  margin: 0 5rem;
+}
+
+.price-con-item tr th {
+  font-weight: 700;
+  color: var(--title-color);
+}
+
+.price-con-item tr td:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--main-color);
-  font: "Poppins", sans-serif;
+}
+
+.price-con-item tr td:nth-child(1),
+.price-con-item tr th:nth-child(1),
+.price-con-item tr td:nth-child(2) {
+  border-right: 2px solid var(--black20);
+}
+
+.details {
+  display: block;
+  margin: 4.167vw 0;
+}
+
+.details li {
+  font-size: 1.4rem;
+  width: 55%;
+  word-break: keep-all;
+  color: var(--black40);
+}
+
+.details li strong {
+  font-weight: 700;
+  color: var(--black50);
+}
+
+@media (max-width: 1320px) {
+  .tip .sec-title {
+    margin-top: 10rem;
+  }
+
+  .tip-list {
+    flex-direction: column;
+  }
+
+  .tip-list li {
+    width: 100%;
+    aspect-ratio: 1/0.3333;
+  }
+
+  .tip-list li strong {
+    top: 80%;
+  }
+
+  .tip-list li p {
+    margin-top: 2%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .tip .sec-title {
+    margin-top: 10rem;
+  }
+
+  .tip-list {
+    flex-direction: column;
+  }
+
+  .tip-list li {
+    width: 100%;
+    aspect-ratio: 1/0.3333;
+  }
+
+  .tip-list li strong {
+    top: 80%;
+  }
+
+  .tip-list li p {
+    margin-top: 2%;
+  }
+  .price .sec-title {
+    margin-top: 15rem;
+  }
+
+  .details li {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tip-list li {
+    width: 100%;
+    aspect-ratio: 1/0.5;
+  }
+
+  .tip-list li:hover strong {
+    top: 8vw;
+  }
+
+  .tip-list li:hover p {
+    top: 8vw;
+  }
+
+  .price .tab-con {
+    margin-top: 4rem;
+  }
+
+  .price-con-item {
+    margin-top: 2rem;
+  }
+
+  .details li {
+    width: 100%;
+  }
 }
