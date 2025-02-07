@@ -1,0 +1,267 @@
+@charset 'utf-8';
+
+.vision {
+  box-shadow: 0px 0px 30px var(--main-color15);
+  padding: 5.8rem 0 14.2rem 0;
+}
+
+.vison-title {
+  margin-top: 9rem;
+  text-align: center;
+  position: relative;
+}
+
+.vison-title::before,
+.vison-title::after {
+  content: "";
+  width: 24.6rem;
+  height: 15rem;
+  position: absolute;
+  background: url(../img/decoration-pic1.svg) no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.vison-title::before {
+  left: 0;
+}
+
+.vison-title::after {
+  right: 0;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.vison-title p:nth-child(1) {
+  color: var(--main-color);
+}
+
+.vison-title h4 {
+  font-size: 8.2rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.vison-title p {
+  margin: 3rem auto 0 auto;
+  width: 50%;
+  word-break: keep-all;
+}
+
+.vip .sec-title {
+  margin-top: 25.8rem;
+}
+
+.vip-service {
+  margin-top: 12rem;
+  display: flex;
+  justify-content: center;
+  gap: 4.5rem;
+}
+
+.vip-service li {
+  width: 41rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 0 5.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: no-repeat 50% / cover;
+  position: relative;
+  cursor: pointer;
+  word-break: keep-all;
+  box-shadow: 0px 0px 30px rgba(14, 33, 47, 0.55);
+}
+
+.vip-service li:nth-child(1) {
+  background-image: url(../img/vip-pic1.jpg);
+}
+.vip-service li:nth-child(2) {
+  background-image: url(../img/vip-pic2.jpg);
+}
+.vip-service li:nth-child(3) {
+  background-image: url(../img/vip-pic3.jpg);
+}
+
+.vip-service li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.vip-service li:hover::after {
+  content: "";
+  height: 100%;
+  background: var(--main-color);
+}
+
+.vip-service dl {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+.vip-service li:hover dl {
+  opacity: 1;
+}
+
+.vip-service dt {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white100);
+  transform: translateY(130%);
+  transition: 0.5s;
+}
+
+.vip-service li:hover dt {
+  transform: translateY(0);
+}
+
+.vip-service dd {
+  transform: translateY(350%);
+  color: var(--white70);
+  transition: 0.5s;
+  margin-top: 2rem;
+}
+
+.vip-service li:hover dd {
+  transform: translateY(0);
+}
+
+.ideology .sec-title {
+  margin-top: 17.8rem;
+}
+
+.slider {
+  margin-top: 7rem;
+  position: relative;
+  width: 100%;
+  height: 73.3rem;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-40%);
+}
+
+.foreground {
+  width: 73rem;
+  height: 74.7rem;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  transform: translateX(-50%);
+  bottom: 48.3rem;
+  z-index: 1;
+  border-radius: 50%;
+  background: var(--white100);
+  overflow: hidden;
+}
+
+.wrap {
+  width: 149.7rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  /* 여기 이미지@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+  background: url(https://cliocosmetic.com/ko/img/sub/people_bg.jpg) no-repeat
+    50% / cover;
+}
+
+.ideology-slider {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: var(--white100);
+}
+
+.ideology-txt dt {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.ideology-txt dd {
+  margin-top: 0.6rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  word-break: keep-all;
+}
+
+.ideology-txt dd + dd {
+  margin-top: 3.5rem;
+}
+
+.story {
+  /* 여기 이미지@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+  background: url(../img/brand-story-pic.jpg) no-repeat 50% / cover;
+  padding: 21.2rem 0 20rem 0;
+  position: relative;
+  /* transform: translateY(-50%); */
+  z-index: 1;
+}
+
+.story::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(73, 73, 71, 100),
+    rgba(73, 73, 71, 0)
+  );
+}
+
+.story .sec-title {
+  color: var(--white100);
+  position: relative;
+  z-index: 1;
+}
+
+.story .sec-title h3 {
+  width: 50%;
+  word-break: keep-all;
+}
+
+.story p {
+  width: 50%;
+  font-size: 2rem;
+  color: var(--white70);
+  word-break: keep-all;
+  margin-top: 2.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.story div + p {
+  margin-top: 8rem;
+}
+
+.story p:last-child {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--white100);
+}
+
+.thanks {
+  background-color: #efefef;
+  height: 38rem;
+}
+
+.thanks h4 {
+  color: var(--title-color);
+  font: 5.2rem/1.5 "Pretendard", sans-serif;
+  padding: 16rem 0;
+  text-align: center;
+}
+.thanks strong {
+  color: var(--main-color);
+  font: "Poppins", sans-serif;
+}

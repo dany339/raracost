@@ -1,0 +1,242 @@
+@charset 'utf-8';
+
+.tip {
+  margin-bottom: 17.5rem;
+}
+
+.tip .sec-title {
+  margin-top: 10.4167vw;
+}
+
+.tip-list {
+  margin-top: 7.5758%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.tip-list li {
+  /* border: 1px solid #000; */
+  width: 31.5rem;
+  aspect-ratio: 1/1.6825;
+  padding: 3rem;
+  word-break: keep-all;
+  border-radius: 10px;
+  overflow: hidden;
+  background: no-repeat 50% / cover;
+  position: relative;
+  text-align: center;
+}
+
+.tip-list li:hover {
+  justify-content: center;
+}
+
+.tip-list li:nth-child(1) {
+  background-image: url(../img/tip-pic1.jpg);
+}
+.tip-list li:nth-child(2) {
+  background-image: url(../img/tip-pic2.jpg);
+}
+.tip-list li:nth-child(3) {
+  background-image: url(../img/tip-pic3.jpg);
+}
+.tip-list li:nth-child(4) {
+  background-image: url(../img/tip-pic4.jpg);
+}
+
+.tip-list li::after {
+  content: "";
+  transition: 0.7s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 120, 32, 0),
+    rgba(245, 120, 32, 0),
+    rgba(245, 120, 32, 0.7)
+  );
+}
+
+.tip-list li:hover::after {
+  content: "";
+  height: 100%;
+  background: var(--main-color70);
+}
+
+.tip-list li strong {
+  /* font-size: 2.8rem; */
+  font-size: clamp(2.4rem, 8.8888%, 2.8rem);
+  font-weight: 700;
+  color: var(--white100);
+  position: relative;
+  z-index: 1;
+  top: 90%;
+  transition: 0.4s;
+}
+
+.tip-list li p {
+  margin-top: 2rem;
+  font-weight: 500;
+  color: var(--white70);
+  position: relative;
+  z-index: 1;
+  top: 120%;
+}
+
+.tip-list li:hover strong {
+  /* font-size: 3rem; */
+  font-size: clamp(2.6rem, 9%, 3rem);
+  top: 35%;
+}
+
+.tip-list li:hover p {
+  top: 35%;
+  transition: 0.6s;
+}
+
+.tip-txt p {
+  margin-top: 2.2727vw;
+  /* margin-top: 3rem; */
+  width: 50%;
+  word-break: keep-all;
+}
+
+.app-benefit {
+  /* height: 100vh; */
+  padding: 10.6rem 0 10.2rem 0;
+  background: var(--main-color);
+}
+
+.app-benefit .sec-title {
+  color: var(--white100);
+}
+.app-benefit .sec-title strong {
+  color: var(--white100);
+}
+
+.app-benefit .view-more {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--white100);
+  right: 0;
+}
+
+.app-benefit .view-more::after {
+  background-image: url(../img/arrow-w-right.png);
+}
+
+.app-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2.8rem;
+  gap: 2rem;
+}
+
+.app-icon {
+  width: 37.5rem;
+  height: 29.6rem;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  background: var(--white10);
+  border-radius: 10px;
+  padding: 5rem 4rem;
+  position: relative;
+}
+
+.app-icon:hover {
+  box-shadow: 0 0 10px rgba(250, 255, 242, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.app-icon dl::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6.5rem;
+  aspect-ratio: 1/1;
+  background: no-repeat 50%;
+}
+
+.app-icon dl.app-icon-1::before {
+  background-image: url(../img/app-ico1.svg);
+}
+
+.app-icon dl.app-icon-2::before {
+  background-image: url(../img/app-ico2.svg);
+}
+
+.app-icon dl.app-icon-3::before {
+  background-image: url(../img/app-ico3.svg);
+}
+
+.app-icon dl.app-icon-4::before {
+  background-image: url(../img/app-ico4.svg);
+}
+
+.app-icon dl.app-icon-5::before {
+  background-image: url(../img/app-ico5.svg);
+}
+
+.app-icon dl.app-icon-6::before {
+  background-image: url(../img/app-ico6.svg);
+}
+
+.app-icon dl dt {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white100);
+  margin-top: 1rem;
+}
+
+.app-icon dl dd {
+  margin-top: 1.2rem;
+  color: var(--white50);
+  word-break: keep-all;
+}
+
+@media (max-width: 1320px) {
+  .tip .sec-title {
+    margin-top: 10rem;
+  }
+
+  .tip-list {
+    flex-direction: column;
+  }
+
+  .tip-list li {
+    width: 100%;
+    aspect-ratio: 1/0.3333;
+  }
+
+  .tip-list li strong {
+    top: 80%;
+  }
+
+  .tip-list li p {
+    margin-top: 2%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tip-list li {
+    width: 100%;
+    aspect-ratio: 1/0.5;
+  }
+
+  .tip-list li:hover strong {
+    top: 8vw;
+  }
+
+  .tip-list li:hover p {
+    top: 8vw;
+  }
+}
