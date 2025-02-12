@@ -11,11 +11,11 @@
 }
 
 .faq {
-  margin-bottom: 13rem;
+  margin-bottom: 6.7708vw;
 }
 
 .faq .sec-title {
-  margin-top: 18rem;
+  margin-bottom: 6.7708vw;
 }
 
 .faq-wrap {
@@ -23,32 +23,6 @@
   justify-content: flex-end;
   gap: 16.5rem;
   margin-top: 4rem;
-}
-
-.faq-tab {
-  display: flex;
-  flex-direction: column;
-  font-size: 3rem;
-  font-weight: 700;
-  gap: 2rem;
-}
-
-.faq-tab li {
-  cursor: pointer;
-}
-
-.faq-tab li:hover {
-  color: var(--main-color);
-  transition: 0.3s;
-}
-
-.faq-tab li.on {
-  color: var(--main-color);
-  transition: 0.3s;
-}
-
-.faq-tab.on {
-  color: var(--main-color);
 }
 
 .info-wrap li {
@@ -116,7 +90,7 @@
 }
 
 .faq-txt h4 {
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 2vw, 3rem);
   font-weight: 700;
   color: var(--title-color);
   word-break: keep-all;
@@ -132,4 +106,21 @@
 .answer-con {
   display: flex;
   gap: 3rem;
+}
+
+@media (max-width: 1360px) {
+  .faq-wrap {
+    flex-direction: column;
+    /* gap: 4.5rem; */
+    gap: 2.3438vw;
+  }
+
+  .faq-tab {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .info-wrap li {
+    width: 100%;
+  }
 }

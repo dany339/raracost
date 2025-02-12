@@ -40,7 +40,7 @@
 }
 
 .map-search.on {
-  transform: translateX(100%); /* 오른쪽으로 밀려나게 설정 */
+  transform: translateX(100%);
 }
 
 .map-search.on .btn-fold {
@@ -60,17 +60,7 @@
   border-top: none;
   border-bottom: none;
   position: relative;
-}
-
-.map-filter::after {
-  content: "";
-  position: absolute;
-  top: 10.5rem;
-  right: -3rem;
-  display: block;
-  width: 62rem;
-  height: 1px;
-  background: var(--black20);
+  border-bottom: 1px solid var(--black20);
 }
 
 .map-filter > strong {
@@ -84,4 +74,50 @@
 
 .map-filter ul {
   gap: 0;
+}
+
+@media (max-width: 1000px) {
+  .map-search {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    transform: translateY(100%);
+  }
+
+  .map-filter ul {
+    gap: 1rem;
+  }
+
+  .map-search.on {
+    transform: translateY(0);
+  }
+
+  .btn-fold {
+    top: -6.8rem;
+    right: 50%;
+    transform: translateX(50%);
+    width: 13.6rem;
+    height: 4rem;
+    background: var(--white100) url(../img/arrow-m-bottom.png) no-repeat 50% 70%;
+  }
+
+  .map-search.on .btn-fold {
+    background-image: url(../img/arrow-m-top.png);
+  }
+
+  .btn-fold {
+    top: 0.2rem;
+  }
+
+  .map-filter::after {
+    right: 0;
+    width: 100%;
+  }
+
+  footer {
+    display: none;
+  }
 }

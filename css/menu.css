@@ -188,6 +188,12 @@
   }
 }
 
+@media (max-width: 670px) {
+  .menu-tab {
+    justify-content: flex-start;
+  }
+}
+
 @media (max-width: 600px) {
   .menu-list {
     grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));

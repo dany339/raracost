@@ -31,8 +31,13 @@
   transform: translateY(-50%) scaleX(-1);
 }
 
+.vison-title p:nth-child(1) {
+  color: var(--main-color);
+}
+
 .vison-title h4 {
-  font-size: 8.2rem;
+  font: 8.2rem/1.1 "Poppins", sans-serif;
+  font-size: clamp(4.5rem, 6vw, 8.2rem);
   font-weight: 600;
   color: var(--main-color);
 }
@@ -44,18 +49,21 @@
 }
 
 .vip .sec-title {
-  margin-top: 25.8rem;
+  margin-top: 13.4375vw;
 }
 
 .vip-service {
-  margin-top: 15rem;
+  margin-top: 7.8125vw;
   display: flex;
   justify-content: center;
-  gap: 4.5rem;
+  gap: 3rem;
+  flex-shrink: 0;
+  overflow-x: auto;
 }
 
 .vip-service li {
   width: 41rem;
+  min-width: 33.5rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   padding: 0 5.4rem;
@@ -359,7 +367,7 @@
 }
 
 .price-con-item tr td:nth-child(1) {
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 2vw, 2rem);
   font-weight: 700;
   color: var(--main-color);
 }
@@ -387,7 +395,27 @@
   color: var(--black50);
 }
 
+@media (max-width: 1800px) {
+  .vison-title::before,
+  .vison-title::after {
+    width: 18rem;
+    height: 13rem;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 1600px) {
+  .vison-title::before,
+  .vison-title::after {
+    display: none;
+  }
+}
+
 @media (max-width: 1320px) {
+  .vip-service {
+    justify-content: flex-start;
+  }
+
   .tip .sec-title {
     margin-top: 10rem;
   }
@@ -440,6 +468,17 @@
   }
 }
 
+@media (max-width: 780px) {
+  .vison-title p {
+    width: 80%;
+  }
+
+  .price-con-item th,
+  .price-con-item td {
+    padding: 0 2rem;
+  }
+}
+
 @media (max-width: 600px) {
   .tip-list li {
     width: 100%;
@@ -452,6 +491,10 @@
 
   .tip-list li:hover p {
     top: 8vw;
+  }
+
+  .price .tab-con {
+    margin-top: 4rem;
   }
 
   .price .tab-con {
