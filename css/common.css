@@ -166,20 +166,6 @@ body {
   margin-left: 1rem;
 }
 
-.btn-talk {
-  position: fixed;
-  bottom: 28.5rem;
-  right: 5.7292vw;
-  width: 5.4rem;
-  aspect-ratio: 1/1;
-  background: var(--main-color) url(../img/ico-talk.svg) no-repeat 50% / 50%;
-  border-radius: 50%;
-  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.25);
-
-  opacity: 0;
-  transition: 0.4s ease;
-}
-
 .btn-top {
   position: fixed;
   bottom: 20.7rem;
@@ -194,10 +180,6 @@ body {
   transition: 0.4s ease;
 }
 
-.btn-talk.active {
-  opacity: 1;
-  bottom: 30.5rem;
-}
 .btn-top.active {
   opacity: 1;
   bottom: 22.7rem;
