@@ -910,12 +910,9 @@ body {
     align-items: center;
   }
 
-  .foot-list::before {
-    width: 122vw;
-  }
-
+  .foot-list::before,
   .foot-list::after {
-    display: none;
+    width: 122vw;
   }
 
   .foot-con {
